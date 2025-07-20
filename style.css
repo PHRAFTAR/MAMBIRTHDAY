@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff0f5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.typing-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid #000;
+    animation: typing 4s steps(40, end) forwards, blink 0.7s step-end infinite;
+    white-space: nowrap;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 0;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.letter-section {
+    margin-top: -20px;
+    padding: 10px 20px 0;
+    text-align: center;
+    font-size: 22px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Caveat', cursive;   /* ✅ Handwritten */
+    line-height: 1.1;                 /* ✅ Tighter lines */
+    animation: handwriting 3s steps(40, end) 1;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+  
+    
+@keyframes handwriting {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🎁 Gift Box Final Design */
+.gift-section {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.gift-box {
+    position: relative;
+    width: 180px;
+    height: 160px;
+    background-color: #ff69b4;
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Shadow added */
+}
+
+.gift-box .lid {
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    width: 200px;
+    height: 40px;
+    background-color: #ff69b4;
+    z-index: 1;
+}
+
+.gift-box .ribbon-vertical {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 20px;
+    height: 100%;
+    background-color: #ffdc3c; /* Golden Yellow */
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.gift-box .ribbon-top {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 20px;
+    height: 40px;
+    background-color: #ffdc3c;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.gift-box .knot-left,
+.gift-box .knot-right {
+    position: absolute;
+    top: -45px;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid #ffdc3c;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    z-index: 4;
+}
+
+.gift-box .knot-left {
+    left: 50px;
+    transform: rotate(-20deg);
+}
+
+.gift-box .knot-right {
+    right: 50px;
+    transform: rotate(20deg);
+}
+
+.gift-box:hover {
+    transform: scale(1.05);
+}
+
+/* 🎉 Birthday Section */
+.birthday-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: #ffe4e1;
+}
+
+.birthday-section h1 {
+    font-size: 28px;
+    color: #c71585;
+    margin-bottom: 10px;
+}
+
+.hearts {
+    font-size: 30px;
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* 📱 Mobile Responsive */
+@media screen and (max-width: 500px) {
+    .typing-text {
+        font-size: 20px;
+    }
+
+    .gift-box {
+        width: 150px;
+        height: 130px;
+    }
+
+    .gift-box .lid {
+        width: 170px;
+        height: 30px;
+        top: -25px;
+    }
+
+    .gift-box .ribbon-vertical,
+    .gift-box .ribbon-top {
+        width: 14px;
+    }
+
+    .gift-box .knot-left,
+    .gift-box .knot-right {
+        border-bottom: 24px solid #ffdc3c;
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        top: -35px;
+    }
+    .ticket-img {
+        width: 300px;           /* ✅ Smaller width */
+        height: 150px;          /* ✅ 2:1 ratio */
+        object-fit: cover;      /* ✅ Clean crop inside box */
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(247, 35, 225, 0.2);
+        margin-bottom: 20px;
+        display: block;
+      }
+      
+      
+}
